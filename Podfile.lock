@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - AudioPlayerSwift (1.6.1)
+  - Haneke (1.0.2)
+  - ObjectMapper (3.3.0)
+  - Promises (2.0.1)
+  - Realm (3.11.1):
+    - Realm/Headers (= 3.11.1)
+  - Realm/Headers (3.11.1)
+  - RealmSwift (3.11.1):
+    - Realm (= 3.11.1)
+  - SVDismissableProgressHUD (0.0.4):
+    - SVProgressHUD (= 2.2.5)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - AudioPlayerSwift
+  - Haneke
+  - ObjectMapper
+  - Promises
+  - RealmSwift
+  - SVDismissableProgressHUD (~> 0.0.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - AudioPlayerSwift
+    - Haneke
+    - ObjectMapper
+    - Promises
+    - Realm
+    - RealmSwift
+    - SVDismissableProgressHUD
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  AudioPlayerSwift: 90b1bbd228bde3eca6bc59320091c3672486328d
+  Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Promises: e94e1d74d818d1d2f8933e1f4f12d443c3bb4f3b
+  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
+  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  SVDismissableProgressHUD: 443bf59a47dc3acbfd921b00e5b34522243c75ef
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: e772489f06703419fefd5cd40d2be1c9358cb634
+
+COCOAPODS: 1.5.3
