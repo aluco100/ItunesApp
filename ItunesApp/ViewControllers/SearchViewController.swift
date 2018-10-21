@@ -140,19 +140,18 @@ class SearchViewController: ViewController,UISearchBarDelegate, UITableViewDeleg
         }
         if let url = notification.userInfo!["url"] as? String{
             if let urlFile = URL(string: url){
-                self.playUsingAVAudioPlayer(url:urlFile)
+                self.playUsingAVAudioPlayer(url: urlFile)
             }
         }
     }
     
     func playUsingAVAudioPlayer(url: URL) {
-        do {
-            let player = try AudioPlayer(contentsOf: url)
-            player.play()
-        } catch let error {
-            print(error)
-        }
+        print("playing \(url)")
+        let playerItem = AVPlayerItem(url: url)
         
+        let player = AVPlayer(playerItem:playerItem)
+        player.volume = 1.0
+        player.play()
         
     }
 

@@ -15,8 +15,10 @@ class AlbumCell: UITableViewCell, CellBehavior {
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
+    @IBOutlet weak var cardView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.cardView.bottomShadow()
         // Initialization code
     }
     

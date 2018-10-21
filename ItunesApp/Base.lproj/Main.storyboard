@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="117.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-y3-9Xi">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-y3-9Xi">
                                                     <rect key="frame" x="20" y="11" width="374" height="96"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-hb-pi9">
@@ -40,11 +40,10 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utc-d6-gXF">
                                                             <rect key="frame" x="96" y="8" width="270" height="80"/>
                                                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="mlN-hb-pi9" firstAttribute="top" secondItem="rsR-y3-9Xi" secondAttribute="top" constant="8" id="33v-dS-imc"/>
                                                         <constraint firstAttribute="bottom" secondItem="mlN-hb-pi9" secondAttribute="bottom" constant="8" id="Cyo-ad-9V5"/>
@@ -70,6 +69,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="albumNameLabel" destination="utc-d6-gXF" id="6UE-Xn-zLi"/>
+                                            <outlet property="cardView" destination="rsR-y3-9Xi" id="byk-Lk-ny7"/>
                                             <outlet property="thumbnailImageView" destination="mlN-hb-pi9" id="64A-yE-mX0"/>
                                         </connections>
                                     </tableViewCell>
@@ -103,7 +103,7 @@
                                                             <state key="normal" image="play"/>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="OZw-7H-PdT" firstAttribute="top" secondItem="Ilo-YO-zSa" secondAttribute="top" constant="8" id="AOb-ag-T9B"/>
                                                         <constraint firstItem="thC-6m-OO2" firstAttribute="top" secondItem="Ilo-YO-zSa" secondAttribute="top" constant="8" id="BTc-8v-VKj"/>
@@ -116,6 +116,11 @@
                                                         <constraint firstItem="OZw-7H-PdT" firstAttribute="leading" secondItem="Ilo-YO-zSa" secondAttribute="leading" constant="8" id="Zkm-AK-CM8"/>
                                                         <constraint firstAttribute="bottom" secondItem="thC-6m-OO2" secondAttribute="bottom" constant="8" id="nPa-3B-edy"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -126,6 +131,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cardView" destination="Ilo-YO-zSa" id="onu-Ox-3kA"/>
                                             <outlet property="nameLabel" destination="thC-6m-OO2" id="xNW-t3-afe"/>
                                             <outlet property="numberLabel" destination="OZw-7H-PdT" id="dba-7i-6KY"/>
                                             <outlet property="playButton" destination="5Bg-Ga-MV3" id="6sJ-rn-pL3"/>

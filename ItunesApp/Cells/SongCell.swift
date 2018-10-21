@@ -14,11 +14,13 @@ class SongCell: UITableViewCell, CellBehavior {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
     var item: MusicItem? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.cardView.bottomShadow()
         // Initialization code
     }
     

@@ -7,6 +7,7 @@ PODS:
   - Haneke (1.0.2)
   - ObjectMapper (3.3.0)
   - Promises (2.0.1)
+  - ReachabilitySwift (4.3.0)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
   - Realm/Headers (3.11.1)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Haneke
   - ObjectMapper
   - Promises
+  - ReachabilitySwift
   - RealmSwift
   - SVDismissableProgressHUD (~> 0.0.4)
 
@@ -34,6 +36,7 @@ SPEC REPOS:
     - Haneke
     - ObjectMapper
     - Promises
+    - ReachabilitySwift
     - Realm
     - RealmSwift
     - SVDismissableProgressHUD
@@ -46,11 +49,12 @@ SPEC CHECKSUMS:
   Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Promises: e94e1d74d818d1d2f8933e1f4f12d443c3bb4f3b
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   SVDismissableProgressHUD: 443bf59a47dc3acbfd921b00e5b34522243c75ef
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: e772489f06703419fefd5cd40d2be1c9358cb634
+PODFILE CHECKSUM: 9174a91605e429ff74c4e2b42bd0b3ad6919ddc5
 
 COCOAPODS: 1.5.3

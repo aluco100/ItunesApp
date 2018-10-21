@@ -14,7 +14,7 @@ target 'ItunesApp' do
   pod 'Haneke'
   pod 'SVDismissableProgressHUD','~>0.0.4'
   pod 'AudioPlayerSwift'
-
+  pod 'ReachabilitySwift'
 
   target 'ItunesAppTests' do
     inherit! :search_paths
