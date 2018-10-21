@@ -27,6 +27,21 @@ class MusicManager {
     //MARK: - Retrieve items
     public func retrieveAlbums(params: [String : Any])->Promise<[Album]>{
         return Promise<[Album]>(work: {fulfill,reject in
+            
+            //NOTAR QUE ESTO SE HACE AQUI PORQUE LA ARQUITECTURA OPTIMA PARA ESTE CASO SERIA EL PATRON VIPER
+            if let isRealm = UserDefaults.standard.value(forKey: "isRealm") as? Bool{
+                if(isRealm){
+                    do{
+                        let realm = try Realm()
+                        let albums = realm.objects(Album.self).filter("albumName contains[cd] %@", params["terms"] as! String)
+                        fulfill(Array(albums))
+                        
+                    }catch let error{
+                        reject(error)
+                    }
+                }
+            }
+            
             DispatchQueue.global(qos: .background).async {
                 Alamofire.request("https://itunes.apple.com/search", method: .get, parameters: params).validate(statusCode: 200..<300).responseJSON(completionHandler: { response in
                     guard response.error == nil else{
@@ -64,6 +79,21 @@ class MusicManager {
     public func retrieveSongs(params: [String : Any])->Promise<[Song]>{
         return Promise<[Song]>(work: {fulfill,reject in
             DispatchQueue.global(qos: .background).async {
+                
+                //NOTAR QUE ESTO SE HACE AQUI PORQUE LA ARQUITECTURA OPTIMA PARA ESTE CASO SERIA EL PATRON VIPER
+                if let isRealm = UserDefaults.standard.value(forKey: "isRealm") as? Bool{
+                    if(isRealm){
+                        do{
+                            let realm = try Realm()
+                            let songs = realm.objects(Song.self).filter("collectionId == %i", params["id"] as! Int)
+                            fulfill(Array(songs))
+                            
+                        }catch let error{
+                            reject(error)
+                        }
+                    }
+                }
+                
                 Alamofire.request("https://itunes.apple.com/lookup", method: .get, parameters: params).validate(statusCode: 200..<300).responseJSON(completionHandler: { response in
                     guard response.error == nil else{
                         reject(response.error!)
