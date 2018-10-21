@@ -100,18 +100,14 @@ class SearchViewController: ViewController,UISearchBarDelegate, UITableViewDeleg
     }
     
     func updateData(text: String){
-        DispatchQueue.global(qos: .background).async {
-            self.context.strategy(isAlbum: self.isAlbum).retrieveData(id: self.context.strategy(isAlbum: self.isAlbum).itemId(item: self.selectedItem), offset: self.offset, text: text, success: {
-                self.albums.append(contentsOf: $0 as! [MusicItem])
-                self.offset = self.offset + 20
-                DispatchQueue.main.async {
-                    self.tableview.reloadData()
-                }
-            }, failure: {
-                self.hud.showDismissableError(status: "Término no encontrado")
-                print($0)
-            })
-        }
+        self.context.strategy(isAlbum: self.isAlbum).retrieveData(id: self.context.strategy(isAlbum: self.isAlbum).itemId(item: self.selectedItem), offset: self.offset, text: text, success: {
+            self.albums.append(contentsOf: $0 as! [MusicItem])
+            self.offset = self.offset + 20
+            self.tableview.reloadData()
+        }, failure: {
+            self.hud.showDismissableError(status: "Término no encontrado")
+            print($0)
+        })
     }
     
     
